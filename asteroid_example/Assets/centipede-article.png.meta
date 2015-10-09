@@ -1,0 +1,671 @@
+fileFormatVersion: 2
+guid: 633de40541fb38d448faef02e730a328
+timeCreated: 1441752058
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: centipede-article_0
+    21300002: centipede-article_1
+    21300004: centipede-article_2
+    21300006: centipede-article_3
+    21300008: centipede-article_4
+    21300010: centipede-article_5
+    21300012: centipede-article_6
+    21300014: centipede-article_7
+    21300016: centipede-article_8
+    21300018: centipede-article_9
+    21300020: centipede-article_10
+    21300022: centipede-article_11
+    21300024: centipede-article_12
+    21300026: centipede-article_13
+    21300028: centipede-article_14
+    21300030: centipede-article_15
+    21300032: centipede-article_16
+    21300034: centipede-article_17
+    21300036: centipede-article_18
+    21300038: centipede-article_19
+    21300040: centipede-article_20
+    21300042: centipede-article_21
+    21300044: centipede-article_22
+    21300046: centipede-article_23
+    21300048: centipede-article_24
+    21300050: centipede-article_25
+    21300052: centipede-article_26
+    21300054: centipede-article_27
+    21300056: centipede-article_28
+    21300058: centipede-article_29
+    21300060: centipede-article_30
+    21300062: centipede-article_31
+    21300064: centipede-article_32
+    21300066: centipede-article_33
+    21300068: centipede-article_34
+    21300070: centipede-article_35
+    21300072: centipede-article_36
+    21300074: centipede-article_37
+    21300076: centipede-article_38
+    21300078: centipede-article_39
+    21300080: centipede-article_40
+    21300082: centipede-article_41
+    21300084: centipede-article_42
+    21300086: centipede-article_43
+    21300088: centipede-article_44
+    21300090: centipede-article_45
+    21300092: centipede-article_46
+    21300094: centipede-article_47
+    21300096: centipede-article_48
+    21300098: centipede-article_49
+    21300100: centipede-article_50
+    21300102: centipede-article_51
+    21300104: centipede-article_52
+    21300106: centipede-article_53
+    21300108: centipede-article_54
+    21300110: centipede-article_55
+  serializedVersion: 2
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 1
+    linearTexture: 0
+    correctGamma: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: .25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 0
+  cubemapConvolution: 0
+  cubemapConvolutionSteps: 8
+  cubemapConvolutionExponent: 1.5
+  seamlessCubemap: 0
+  textureFormat: -1
+  maxTextureSize: 2048
+  textureSettings:
+    filterMode: -1
+    aniso: 16
+    mipBias: -1
+    wrapMode: 1
+  nPOTScale: 0
+  lightmap: 0
+  rGBM: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: .5, y: .5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaIsTransparency: 1
+  textureType: 8
+  buildTargetSettings: []
+  spriteSheet:
+    sprites:
+    - name: centipede-article_0
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 366
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_1
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 366
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_2
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 366
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_3
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 366
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_4
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 366
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_5
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 366
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_6
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 366
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_7
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 366
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_8
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 366
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_9
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 306
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_10
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 306
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_11
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 306
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_12
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 306
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_13
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 306
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_14
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 306
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_15
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 306
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_16
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 306
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_17
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 306
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_18
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 246
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_19
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 246
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_20
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 246
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_21
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 246
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_22
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 246
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_23
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 246
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_24
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 246
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_25
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 246
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_26
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 246
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_27
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 186
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_28
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 186
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_29
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 186
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_30
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 186
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_31
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 186
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_32
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 186
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_33
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 186
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_34
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 186
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_35
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 186
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_36
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 126
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_37
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 126
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_38
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 126
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_39
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 126
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_40
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 126
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_41
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 126
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_42
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 126
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_43
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 126
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_44
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 126
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_45
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 66
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_46
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 66
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_47
+      rect:
+        serializedVersion: 2
+        x: 104
+        y: 66
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_48
+      rect:
+        serializedVersion: 2
+        x: 156
+        y: 66
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_49
+      rect:
+        serializedVersion: 2
+        x: 208
+        y: 66
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_50
+      rect:
+        serializedVersion: 2
+        x: 260
+        y: 66
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_51
+      rect:
+        serializedVersion: 2
+        x: 312
+        y: 66
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_52
+      rect:
+        serializedVersion: 2
+        x: 364
+        y: 66
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_53
+      rect:
+        serializedVersion: 2
+        x: 416
+        y: 66
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_54
+      rect:
+        serializedVersion: 2
+        x: 0
+        y: 6
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+    - name: centipede-article_55
+      rect:
+        serializedVersion: 2
+        x: 52
+        y: 6
+        width: 52
+        height: 60
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
