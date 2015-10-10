@@ -3,8 +3,6 @@ using System.Collections;
 
 public class PlayerScript : MonoBehaviour {
 
-    public GameObject BackGround;
-
     public float Screen_speed;
 
 
@@ -37,19 +35,17 @@ public class PlayerScript : MonoBehaviour {
         Touch touch_one = Input.GetTouch(0);
         if (touch_one.phase != TouchPhase.Ended)
         {
-            BackGround = UnityEngine.GameObject.FindGameObjectWithTag("BackGround");
 
             Vector2 Direction = new Vector2(
               ((touch_one.position.x / (float)Screen.width) * 320.0f - 160.0f),
               ((touch_one.position.y / (float)Screen.height) * 200.0f - 100.0f));
 
-            BackGround.GetComponent<Rigidbody2D>().velocity = (Direction / Direction.magnitude) * Screen_speed;
+            GetComponent<Rigidbody2D>().velocity = (Direction / Direction.magnitude) * Screen_speed;
         }
 
         else
         {
-            BackGround = UnityEngine.GameObject.FindGameObjectWithTag("BackGround");
-            BackGround.GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
         }
     }
 }
