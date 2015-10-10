@@ -44,4 +44,17 @@ public class VillagerBehavior : MonoBehaviour {
         float angle = Mathf.Atan2(x, y) * Mathf.Rad2Deg;
         transform.eulerAngles = new Vector3(0, 0, angle + 90);
     }
+
+    void OnTriggerEnter2D(Collider2D collider)
+    {
+        if (collider.gameObject.tag == "WerewolfNPC")
+        {
+            if (WereWolfNPCBehavior.VillagerCount < 3)
+            {
+                WereWolfNPCBehavior.VillagerCount++;
+                WereWolfNPCBehavior.FollowingVillager = false;
+                Destroy(gameObject);
+            }
+        }
+    }
 }

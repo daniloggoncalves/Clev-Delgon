@@ -4,25 +4,65 @@ using System.Collections;
 public class WereWolfNPCBehavior : MonoBehaviour {
 
     public float WereWolf_Velocity;
+    static public int VillagerCount;
+    public GameObject TemporaryFollowing;
+    public GameObject Base;
+    public GameObject VillagerSpawner;
+    static public bool FollowingVillager;
+    
+    private bool ReturningBase;
 
-    private int VillagerCount;
 
 	void Start ()
     {
+        GoToVillage();
         VillagerCount = 0;
 	}
 	
 	void Update ()
     {
-        if(Vector2.Distance(FindClosestVillager().transform.position, transform.position) < 56)
+        Debug.Log(VillagerCount);
+        if (VillagerCount >= 3)
         {
-            GoAfterVillager();
+            ReturnBase();
+
+            Base = GameObject.FindGameObjectWithTag("Base");
+            if (Vector2.Distance(transform.position, Base.transform.position) <= 50)
+            {
+                VillagerCount = 0;
+                ReturningBase = false;
+                GoToVillage();
+            }
         }
-	}
 
-    void AddVillagerPoint()
+        if (ReturningBase == false)
+        {
+            if (FollowingVillager == true)
+            {
+                FollowObject(TemporaryFollowing);
+            }
+            if (Vector2.Distance(FindClosestVillager().transform.position, transform.position) <100 && FollowingVillager == false)
+            {
+                TemporaryFollowing = FindClosestVillager();
+                FollowingVillager = true;
+            }
+
+            if (Vector2.Distance(FindClosestVillager().transform.position, transform.position) > 100 && FollowingVillager == false)
+            {
+                GoToVillage();
+            }
+        }
+    }
+
+    void FollowObject(GameObject Object)
     {
-
+        float angle = Mathf.Atan2(
+            Object.transform.position.y - transform.position.y,
+            Object.transform.position.x - transform.position.x
+            ) * Mathf.Rad2Deg;
+        transform.eulerAngles = new Vector3(0, 0, angle);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * WereWolf_Velocity;
+        FollowingVillager = true;
     }
 
     void GoAfterVillager()
@@ -33,6 +73,7 @@ public class WereWolfNPCBehavior : MonoBehaviour {
             ) * Mathf.Rad2Deg;
         transform.eulerAngles = new Vector3(0, 0, angle);
         GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * WereWolf_Velocity;
+        FollowingVillager = true;
     }
 
     GameObject FindClosestVillager()
@@ -55,8 +96,38 @@ public class WereWolfNPCBehavior : MonoBehaviour {
         return closest;
     }
 
-    void GoBack()
+    void GoToVillage()
     {
+        VillagerSpawner = GameObject.FindGameObjectWithTag("VillagerSpawner");
 
+
+        float angle = Mathf.Atan2(
+
+            VillagerSpawner.transform.position.y - transform.position.y,
+            VillagerSpawner.transform.position.x - transform.position.x) * Mathf.Rad2Deg;
+
+
+        GetComponent<Rigidbody2D>().velocity = (new Vector2(Mathf.Cos(angle + 90), Mathf.Sin(angle + 90)) * WereWolf_Velocity);
+
+        transform.eulerAngles = new Vector3(0, 0, angle);
+
+    }
+
+    void ReturnBase()
+    {
+        Base = GameObject.FindGameObjectWithTag("Base");
+
+
+        float angle = Mathf.Atan2(
+        
+            Base.transform.position.y - transform.position.y,
+            Base.transform.position.x - transform.position.x) * Mathf.Rad2Deg;
+
+
+        GetComponent<Rigidbody2D>().velocity = (new Vector2(Mathf.Cos(angle + 90), Mathf.Sin(angle + 90)) * WereWolf_Velocity);
+        Debug.Log(GetComponent<Rigidbody2D>().velocity.x);
+        transform.eulerAngles = new Vector3(0, 0, angle);
+        
+        ReturningBase = true;
     }
 }
