@@ -5,16 +5,21 @@ public class WereWolfNPCBehavior : MonoBehaviour {
 
     public float WereWolf_Velocity;
     static public int VillagerCount;
-    public GameObject TemporaryFollowing;
-    public GameObject Base;
     public GameObject VillagerSpawner;
     static public bool FollowingVillager;
-    
+
+    public float wereWolf_Velocity;
+    private GameObject TemporaryFollowing;
+    private GameObject Base;
+    private GameObject Player;
+    private bool PlayerAround;
     private bool ReturningBase;
 
 
 	void Start ()
     {
+        Player = GameObject.FindGameObjectWithTag("Player");
+        Base = GameObject.FindGameObjectWithTag("Base");
         GoToVillage();
         VillagerCount = 0;
 	}
@@ -22,21 +27,29 @@ public class WereWolfNPCBehavior : MonoBehaviour {
 	void Update ()
     {
         Debug.Log(VillagerCount);
-        if (VillagerCount >= 3)
+
+        wereWolf_Velocity = ((WereWolf_Velocity * (10 - VillagerCount)) / 10);
+        Debug.Log(wereWolf_Velocity);
+
+        if (VillagerCount >= 3 || PlayerAround == true)
         {
             ReturnBase();
 
-            Base = GameObject.FindGameObjectWithTag("Base");
             if (Vector2.Distance(transform.position, Base.transform.position) <= 50)
             {
                 VillagerCount = 0;
                 ReturningBase = false;
+                PlayerAround = false;
                 GoToVillage();
+                wereWolf_Velocity = WereWolf_Velocity;
             }
         }
 
-        if (ReturningBase == false)
+        CheckForPlayer(Player);
+
+        if (ReturningBase == false && PlayerAround == false)
         {
+
             if (FollowingVillager == true)
             {
                 FollowObject(TemporaryFollowing);
@@ -54,6 +67,14 @@ public class WereWolfNPCBehavior : MonoBehaviour {
         }
     }
 
+    void CheckForPlayer(GameObject Player)
+    {
+        if (Vector2.Distance(transform.position, Player.transform.position) < 30)
+        {
+            PlayerAround = true;
+        }
+    }
+
     void FollowObject(GameObject Object)
     {
         float angle = Mathf.Atan2(
@@ -61,7 +82,7 @@ public class WereWolfNPCBehavior : MonoBehaviour {
             Object.transform.position.x - transform.position.x
             ) * Mathf.Rad2Deg;
         transform.eulerAngles = new Vector3(0, 0, angle);
-        GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * WereWolf_Velocity;
+        GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * wereWolf_Velocity;
         FollowingVillager = true;
     }
 
@@ -72,7 +93,7 @@ public class WereWolfNPCBehavior : MonoBehaviour {
             FindClosestVillager().transform.position.x - transform.position.x
             ) * Mathf.Rad2Deg;
         transform.eulerAngles = new Vector3(0, 0, angle);
-        GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * WereWolf_Velocity;
+        GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * wereWolf_Velocity;
         FollowingVillager = true;
     }
 
@@ -107,7 +128,7 @@ public class WereWolfNPCBehavior : MonoBehaviour {
             VillagerSpawner.transform.position.x - transform.position.x) * Mathf.Rad2Deg;
 
 
-        GetComponent<Rigidbody2D>().velocity = (new Vector2(Mathf.Cos(angle + 90), Mathf.Sin(angle + 90)) * WereWolf_Velocity);
+        GetComponent<Rigidbody2D>().velocity = (new Vector2(Mathf.Cos(angle + 90), Mathf.Sin(angle + 90)) * wereWolf_Velocity);
 
         transform.eulerAngles = new Vector3(0, 0, angle);
 
@@ -124,8 +145,7 @@ public class WereWolfNPCBehavior : MonoBehaviour {
             Base.transform.position.x - transform.position.x) * Mathf.Rad2Deg;
 
 
-        GetComponent<Rigidbody2D>().velocity = (new Vector2(Mathf.Cos(angle + 90), Mathf.Sin(angle + 90)) * WereWolf_Velocity);
-        Debug.Log(GetComponent<Rigidbody2D>().velocity.x);
+        GetComponent<Rigidbody2D>().velocity = (new Vector2(Mathf.Cos(angle + 90), Mathf.Sin(angle + 90)) * wereWolf_Velocity);
         transform.eulerAngles = new Vector3(0, 0, angle);
         
         ReturningBase = true;
