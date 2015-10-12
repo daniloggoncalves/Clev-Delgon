@@ -22,7 +22,7 @@ public class VillagerSpawner : MonoBehaviour {
 		
 			if (i < 5)
 		{
-				Instantiate(villagerNPCPrefab, Vector3.zero, Quaternion.identity);
+				Instantiate(villagerNPCPrefab, new Vector3 (0,0, -90), Quaternion.identity);
 		}
 
 		Invoke("SpawnVillager", Random.Range(minSpawnTime, maxSpawnTime));

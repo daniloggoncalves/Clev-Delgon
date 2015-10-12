@@ -45,16 +45,27 @@ public class VillagerBehavior : MonoBehaviour {
         transform.eulerAngles = new Vector3(0, 0, angle + 90);
     }
 
+
     void OnTriggerEnter2D(Collider2D collider)
     {
         if (collider.gameObject.tag == "WerewolfNPC")
         {
-            if (WereWolfNPCBehavior.VillagerCount < 3)
+            if (WereWolfNPCBehavior.VillagerCountWerewolf < 3)
             {
-                WereWolfNPCBehavior.VillagerCount++;
+                WereWolfNPCBehavior.VillagerCountWerewolf++;
                 WereWolfNPCBehavior.FollowingVillager = false;
+                Destroy(gameObject);
+            }
+        }
+
+        if (collider.gameObject.tag == "Player")
+        {
+            if (PlayerScript.VillagerCountPlayer < 2)
+            {
+                PlayerScript.VillagerCountPlayer++;
                 Destroy(gameObject);
             }
         }
     }
 }
+

@@ -4,7 +4,7 @@ using System.Collections;
 public class WereWolfNPCBehavior : MonoBehaviour {
 
     public float WereWolf_Velocity;
-    static public int VillagerCount;
+    static public int VillagerCountWerewolf;
     public GameObject VillagerSpawner;
     static public bool FollowingVillager;
 
@@ -21,23 +21,22 @@ public class WereWolfNPCBehavior : MonoBehaviour {
         Player = GameObject.FindGameObjectWithTag("Player");
         Base = GameObject.FindGameObjectWithTag("Base");
         GoToVillage();
-        VillagerCount = 0;
+        VillagerCountWerewolf = 0;
 	}
 	
 	void Update ()
     {
-        Debug.Log(VillagerCount);
 
-        wereWolf_Velocity = ((WereWolf_Velocity * (10 - VillagerCount)) / 10);
-        Debug.Log(wereWolf_Velocity);
+        wereWolf_Velocity = ((WereWolf_Velocity * (10 - VillagerCountWerewolf)) / 10);
 
-        if (VillagerCount >= 3 || PlayerAround == true)
+        if (VillagerCountWerewolf >= 3 || PlayerAround == true)
         {
             ReturnBase();
 
             if (Vector2.Distance(transform.position, Base.transform.position) <= 50)
             {
-                VillagerCount = 0;
+                ScoreScript.WerewolfScore = ScoreScript.WerewolfScore + VillagerCountWerewolf;
+                VillagerCountWerewolf = 0;
                 ReturningBase = false;
                 PlayerAround = false;
                 GoToVillage();
@@ -77,13 +76,21 @@ public class WereWolfNPCBehavior : MonoBehaviour {
 
     void FollowObject(GameObject Object)
     {
-        float angle = Mathf.Atan2(
-            Object.transform.position.y - transform.position.y,
-            Object.transform.position.x - transform.position.x
-            ) * Mathf.Rad2Deg;
-        transform.eulerAngles = new Vector3(0, 0, angle);
-        GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * wereWolf_Velocity;
-        FollowingVillager = true;
+        if (Object != null)
+        {
+            float angle = Mathf.Atan2(
+    Object.transform.position.y - transform.position.y,
+    Object.transform.position.x - transform.position.x
+    ) * Mathf.Rad2Deg;
+            transform.eulerAngles = new Vector3(0, 0, angle);
+            GetComponent<Rigidbody2D>().velocity = new Vector2(Mathf.Cos(angle), Mathf.Sin(angle)) * wereWolf_Velocity;
+            FollowingVillager = true;
+        }
+        if (Object == null)
+        {
+            FollowingVillager = false;
+        }
+
     }
 
     void GoAfterVillager()
