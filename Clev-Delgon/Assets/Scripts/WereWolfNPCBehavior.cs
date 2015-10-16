@@ -6,7 +6,6 @@ public class WereWolfNPCBehavior : MonoBehaviour {
     public float WereWolf_VelocityMAX;
     static public int VillagerCountWerewolf;
     public GameObject VillagerSpawner;
-    static public bool FollowingVillager;
 	public int WeightofVillagerforWerewolf;
 
     private float wereWolf_VelocityACTUAL;
@@ -67,13 +66,12 @@ public class WereWolfNPCBehavior : MonoBehaviour {
 
 			TemporaryFollowing = FindClosestVillager();
 
-            if (Vector2.Distance(TemporaryFollowing.transform.position, transform.position) < 100 && FollowingVillager == false)
+            if (Vector2.Distance(TemporaryFollowing.transform.position, transform.position) < 100)
 	            {
 					Follow(TemporaryFollowing);
-					FollowingVillager = true;
 	            }
 
-			if (Vector2.Distance(TemporaryFollowing.transform.position, transform.position) > 100 && FollowingVillager == false)
+			if (Vector2.Distance(TemporaryFollowing.transform.position, transform.position) > 100)
 	            {
 	                //Go to village
 					Follow(VillagerSpawner);

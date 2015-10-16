@@ -53,7 +53,6 @@ public class VillagerBehavior : MonoBehaviour {
             if (WereWolfNPCBehavior.VillagerCountWerewolf < 3)
             {
                 WereWolfNPCBehavior.VillagerCountWerewolf++;
-                WereWolfNPCBehavior.FollowingVillager = false;
                 Destroy(gameObject);
             }
         }
